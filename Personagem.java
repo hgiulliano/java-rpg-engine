@@ -57,10 +57,8 @@ public abstract class Personagem{
         }
 
         public void setHp(int pontosVida){
-            if (pontosVida < 0){
-                this.pontosVida = 0;
-                System.out.println("A vida do heroi "+this.nome+" chegou a 0 e ele desmaiou!.");
-            }
+            if (pontosVida <= 0){
+                this.pontosVida = 0;            }
             else{
                 this.pontosVida = pontosVida;
             }

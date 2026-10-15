@@ -10,11 +10,19 @@ public class Main {
     public static void main(String[] args) {
  
         ArrayList<Personagem> party = new ArrayList<>();
-        Heroi percy = new Heroi("Percy", "tabaxi", "ladino", 8, 55, null);
-        Monstro goblin = new Monstro("Goblin", "goblin", "guerreiro", 3, 30, null, 100);
+        Arma cimitarra = new Arma("Cimitarra", 10);
+        Heroi percy = new Heroi("Percy", "tabaxi", "ladino", 8, 55, cimitarra);
+        Monstro goblin = new Monstro("Goblin", "goblin", "guerreiro", 3, 20, null, 100);
         party.add(percy);
         party.add(goblin);
-        percy.ganharXP(goblin.getXpAbate());
+        listarParty(party);
+        percy.atacar(goblin);
+        goblin.atacar(percy);
+        percy.atacar(goblin);
+
+        if (goblin.getHP() <= 0){
+            percy.ganharXP(goblin.getXpAbate());
+        }
         listarParty(party);
     }
 }

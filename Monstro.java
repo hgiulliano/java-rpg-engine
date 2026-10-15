@@ -10,4 +10,11 @@ public class Monstro extends Personagem {
     public int getXpAbate(){
         return this.xpAbate;
     }
+
+    @Override 
+    public void atacar(Personagem alvo) {
+        int dano = (this.getNivel()*2);
+        alvo.receberDano(dano);
+        System.out.println("O Monstro " + this.getNome() + " atacou o alvo " + alvo.getNome() + " e causou " + dano + " de dano.");
+    }
 }
