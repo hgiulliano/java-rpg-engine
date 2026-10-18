@@ -16,13 +16,8 @@ public class Main {
         party.add(percy);
         party.add(goblin);
         listarParty(party);
-        percy.atacar(goblin);
-        goblin.atacar(percy);
-        percy.atacar(goblin);
-
-        if (goblin.getHP() <= 0){
-            percy.ganharXP(goblin.getXpAbate());
-        }
+        percy.realizarAtaqueFurtivo(goblin);
+        percy.lancarMagia(goblin);
         listarParty(party);
     }
 }

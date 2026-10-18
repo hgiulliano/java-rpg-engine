@@ -1,4 +1,4 @@
-public class Heroi extends Personagem{
+public class Heroi extends Personagem implements Furtivo, Conjurador{
     
     private int pontosExperiencia;
     
@@ -28,6 +28,28 @@ public class Heroi extends Personagem{
             alvo.receberDano(1);
             System.out.println("O heroi " + this.nome + " atacou " + alvo.getNome() + " desarmado causando 1 de dano.");
         }
+    }
+
+    @Override 
+    public void realizarAtaqueFurtivo(Personagem alvo) {
+        if (this.armaEquipada != null){
+            int danoAtaqueFurtivo = (this.armaEquipada.getDanoMaximo()*2);
+            alvo.receberDano(danoAtaqueFurtivo);
+            System.out.println("Ataque Furtivo!! O heroi "+this.getNome()+" causou "+danoAtaqueFurtivo+" ao "+alvo.getNome()+".");
+        }
+        else{
+            int danoAtaqueFurtivo = 2;
+            alvo.receberDano(2);
+            System.out.println("Ataque Furtivo!! O heroi "+this.getNome()+" esta desarmado e causou "+danoAtaqueFurtivo+" ao "+alvo.getNome()+".");
+
+        }
+    }
+
+    @Override 
+    public void lancarMagia(Personagem alvo){
+        int danoMagia = 15;
+        alvo.receberDano(danoMagia);
+        System.out.println("O heroi "+this.nome+" lancou uma magia arcana no "+alvo.getNome()+", causando 15 de dano magico!");
     }
 }
     
