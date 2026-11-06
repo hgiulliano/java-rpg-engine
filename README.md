@@ -20,3 +20,11 @@ Um motor tático via terminal para simulação e gestão de combates de RPG, con
 ## Licença
 
 Distribuído sob a licença [MIT](LICENSE).
+
+---
+
+<div align="center">
+
+Feito por [@hgiulliano](https://github.com/hgiulliano)
+
+</div>
