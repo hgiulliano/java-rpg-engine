@@ -16,3 +16,7 @@ Um motor tático via terminal para simulação e gestão de combates de RPG, con
 1. Clone o repositório: `git clone https://github.com/hgiulliano/java-rpg-engine.git`
 2. Compile todos os ficheiros fonte: `javac *.java`
 3. Inicie o motor tático: `java Main`
+
+## Licença
+
+Distribuído sob a licença [MIT](LICENSE).
